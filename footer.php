@@ -16,7 +16,7 @@
 			<?php do_action( 'Motil_II_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'Motil_II' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'Motil_II' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'Motil_II' ), 'Motil_II', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'Motil_II' ), 'Motil_II', '<a href="www.treedevelop.com" rel="designer">Shidima</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer .site-footer -->
 </div><!-- #page .hfeed .site -->

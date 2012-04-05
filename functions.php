@@ -1,15 +1,15 @@
 <?php
 /**
- * Motil_II functions and definitions
+ * _s functions and definitions
  *
- * @package Motil_II
- * @since Motil_II 1.0
+ * @package _s
+ * @since _s 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since Motil_II 1.0
+ * @since _s 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
@@ -22,7 +22,7 @@ if ( ! function_exists( 'Motil_II_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since Motil_II 1.0
+ * @since _s 1.0
  */
 function Motil_II_setup() {
 
@@ -49,7 +49,7 @@ function Motil_II_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on Motil_II, use a find and replace
+	 * If you're building a theme based on _s, use a find and replace
 	 * to change 'Motil_II' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'Motil_II', get_template_directory() . '/languages' );
@@ -87,10 +87,10 @@ add_action( 'after_setup_theme', 'Motil_II_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since Motil_II 1.0
+ * @since _s 1.0
  */
 function Motil_II_widgets_init() {
-	registerMotil_IIidebar( array(
+	register_sidebar( array(
 		'name' => __( 'Sidebar', 'Motil_II' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -104,22 +104,22 @@ add_action( 'widgets_init', 'Motil_II_widgets_init' );
 /**
  * Enqueue scripts and styles
  */
-function Motil_IIMotil_IIcripts() {
+function Motil_II_scripts() {
 	global $post;
 
-	wp_enqueueMotil_IItyle( 'style', getMotil_IItylesheet_uri() );
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	wp_enqueueMotil_IIcript( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
-	if ( isMotil_IIingular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueueMotil_IIcript( 'comment-reply' );
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( isMotil_IIingular() && wp_attachment_is_image( $post->ID ) ) {
-		wp_enqueueMotil_IIcript( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+	if ( is_singular() && wp_attachment_is_image( $post->ID ) ) {
+		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
-add_action( 'wp_enqueueMotil_IIcripts', 'Motil_IIMotil_IIcripts' );
+add_action( 'wp_enqueue_scripts', 'Motil_II_scripts' );
 
 /**
  * Implement the Custom Header feature

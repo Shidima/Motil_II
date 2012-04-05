@@ -3,14 +3,13 @@ Theme Name: Motil_II
 Theme URI: https://wpcom-themes.svn.automattic.com/Motil_II/
 Author: Automattic
 Author URI: http://automattic.com/
-Description: Hi. I'm a starter theme called <code>Motil_II</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Description: Hi. I'm a theme called <code>Motil_II</code>.
 Version: 1.0-wpcom
 License: GNU General Public License
 License URI: license.txt
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -18,7 +17,7 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 */
 
-
+@import url('layouts/content-sidebar.css');
 /* =Reset
 -------------------------------------------------------------- */
 
@@ -411,6 +410,15 @@ a:active {
 
 /* =Content
 ----------------------------------------------- */
+.site-title {
+	text-align: right;
+}
+.site-title a {
+	text-decoration: none;
+	font-size: 64px;
+	font-family: 'Condiment', cursive;
+	color: #2b0d26;
+}
 
 .sticky {
 }
@@ -437,6 +445,11 @@ a:active {
 }
 
 
+.entry-title {
+  font-size: 20px;
+  font-family: 'Oleo Script', cursive;
+}
+
 /* =Asides
 ----------------------------------------------- */
 
@@ -448,6 +461,21 @@ a:active {
 
 /* =Media
 ----------------------------------------------- */
+#page {
+	margin: 0 auto;
+  	width: 960px;
+  	background-color: #FFFFFF;
+  	border-radius: 5px 5px 5px 5px;
+  	box-shadow: 3px 3px 4px 1px #000;
+}
+
+body {
+	/*background-color: #E4E2D2;*/
+ 	background: url('img/bg.jpg') center top no-repeat;
+	padding-top: 20px;
+	padding-bottom: 75px;
+  
+}
 
 .site-header img,
 .entry-content img,
@@ -467,6 +495,22 @@ img.size-full {
 	max-width: 100%;
 	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
+
+.site-header {
+	background-color: #f291e3;
+	border-radius: 5px 5px 0px 0px;
+	text-align: right;
+}
+
+.main-navigation { 
+	background-color: #f291e3;
+}
+
+.site-description {
+	font-size: 18px;
+  	font-family: 'Great Vibes', cursive;
+}
+
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	border: none;
@@ -537,17 +581,43 @@ object {
 	width: 50%;
 }
 
+/* =Posts
+----------------------------------------------- */
+
+.post {
+	padding: 10px 10px 10px 10px;
+}
+
+.entry-content {
+
+}
+
+.entry-meta {
+	font-size: 11px;
+}
+
 /* =Comments
 ----------------------------------------------- */
 
 .bypostauthor {
+	background-color: #ffabf0;
+	border-radius: 5px;
 }
 
 /* =Widgets
 ----------------------------------------------- */
 
+.widget-area {
+	padding-top: 10px;
+}
+
 .widget {
 	margin: 0 0 1.5em;
+	font-size: 10px;
+}
+
+.widget a {
+	text-decoration: none;
 }
 
 /* Search widget */

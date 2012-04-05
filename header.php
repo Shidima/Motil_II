@@ -33,11 +33,15 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'Motil_II' ), max( $paged, $page ) );
 
 	?></title>
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes|Condiment|Oleo+Script' rel='stylesheet' type='text/css'>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+
+
+
 
 <?php wp_head(); ?>
 </head>
