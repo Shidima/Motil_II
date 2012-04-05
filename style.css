@@ -406,6 +406,13 @@ a:active {
 .main-small-navigation .menu {
 	display: none;
 }
+.menu {
+	margin-left: 50px;
+}
+
+.menu li {
+	padding: 5px 50px 5px 0px;
+}
 
 
 /* =Content
@@ -444,10 +451,15 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.entry-title a {
+	text-decoration: none;
+	color: #ab0091;
+}
 
 .entry-title {
   font-size: 20px;
   font-family: 'Oleo Script', cursive;
+
 }
 
 /* =Asides
@@ -473,8 +485,11 @@ body {
 	/*background-color: #E4E2D2;*/
  	background: url('img/bg.jpg') center top no-repeat;
 	padding-top: 20px;
-	padding-bottom: 75px;
-  
+	padding-bottom: 75px;  
+}
+
+body a {
+	text-decoration: none;
 }
 
 .site-header img,
@@ -574,6 +589,7 @@ object {
 #content .nav-previous {
 	float: left;
 	width: 50%;
+	font-size: 12px;
 }
 #content .nav-next {
 	float: right;
@@ -594,6 +610,15 @@ object {
 
 .entry-meta {
 	font-size: 11px;
+	color: #a6a6a6;
+}
+
+.entry-meta a {
+	color: #4f4f4f;
+}
+
+.entry-meta a:hover {
+	text-decoration: underline;
 }
 
 /* =Comments
@@ -618,6 +643,10 @@ object {
 
 .widget a {
 	text-decoration: none;
+}
+
+.widget a:hover {
+	text-decoration: underline;
 }
 
 /* Search widget */
